@@ -12,7 +12,53 @@ while( potentialSurvivors.length < 30){
   }
   }
 }
+//Mostincommon
+var mostIdentical = {
+    formnum1: 0,
+    formnum2: 0,
+    percentage: 0
+  }
 
+// COMPARE DNA outside of methods
+    const batchCompare = (array) =>{
+  
+   //compare every dna
+  let totalincommon = 0
+    for( let i=0; i<array.length; i++){
+        
+     for ( let i2=0; i2<array[i2].dna.length; i2++){
+       totalincommon = 0;
+       for(let i3=0; i3<array[i].dna.length; i3++){
+        
+         if(array[i].dna[i3] === array[i2].dna[i3] && i !== i2){
+           totalincommon++
+           
+         }
+       if(totalincommon/array[i].dna.length > mostIdentical.percentage){
+         mostIdentical.formnum1 = array[i].specimenNum;
+         mostIdentical.formnum2 = array[i2].specimenNum;
+         mostIdentical.percentage = totalincommon/array[i].dna.length;
+       }}
+       
+     }
+  if(totalincommon/array[i].length > mostIdentical.percentage){
+    mostIdentical.formnum1 = i
+  }}
+  console.log("The organisms org:"+mostIdentical.formnum1 + " and org:" + mostIdentical.formnum2 + " are the most in common in the provided set. They have: "+ mostIdentical.percentage*100 +"% in common")
+    
+          
+        }
+      
+    
+  
+  
+  
+
+        
+      
+      
+
+//////////////////////////////////////////////////////////
 // Returns a random DNA base
 const returnRandBase = () => {
   const dnaBases = ['A', 'T', 'C', 'G']
@@ -72,7 +118,8 @@ const pAequorFactory =(specimenNum, dna)=>{
         }
       }
       
-      console.log("Object:" + this.specimenNum +" and Object:" + pAequorObject.specimenNum + " have " +(totalShared/pAequorObject.dna.length)*100 + "% DNA in common.");  
+      console.log("Object:" + this.specimenNum +" and Object:" + pAequorObject.specimenNum + " have " +(totalShared/pAequorObject.dna.length)*100 + "% DNA in common."); 
+      return totalShared/pAequorObject.dna.length;
     },
     willLikelySurvive(){
       var amtCorG = 0
@@ -157,6 +204,8 @@ const pAequorFactory =(specimenNum, dna)=>{
     
     }}}}
 
+
+
   
 
 
@@ -179,9 +228,13 @@ const test2 = pAequorFactory(3, ['A', 'C', 'G','T']);
 //console.log(test1.rna);
 //console.log(test1.codons);
 //console.log(test1.aminoArray)
+create30Viable();
+batchCompare(potentialSurvivors);
 
-//create30Viable();
+
+console.log(mostIdentical)
+
 //console.log(potentialSurvivors);
 //console.log(potentialSurvivors[1].transcribe())
 //console.log(potentialSurvivors[1].aminoArray);
-
+//potentialSurvivors[1].compareDNA[potentialSurvivors[2]]
