@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" href = "./style.css"  type = "text/css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+<header class= 'title'><h1>Tic-Tac <span class=label>Tony! Toni! Toné!</span></h1></header>
+<div id='gameSection'>  
+<div class='score'>Red
+    <h1 id='redScore'>0</h1>
+</div>
+    <div id='gameBox'>
+    <table>
+        <tr><td ><div class='box'id='b1'>  <div class='filled' id='chip1'>    <div id="ovid1" class='overlay'></div>    </div>   </div></td>
+            <td ><div class='box'id='b2'>  <div class='filled' id='chip2'>    <div id="ovid2" class='overlay'></div>    </div>   </div> </td>
+            <td ><div class='box'id='b3'>  <div class='filled' id='chip3'>    <div id="ovid3" class='overlay'></div>    </div>   </div> </td> </tr>  
+
+        <tr><td ><div class='box'id='b4'>  <div class='filled'id='chip4'>    <div id="ovid4" class='overlay'></div>    </div>   </div></td>
+            <td ><div class='box'id='b5'>  <div class='filled'id='chip5'>    <div id="ovid5" class='overlay'></div>    </div>   </div> </td>
+            <td ><div class='box'id='b6'>  <div class='filled'id='chip6'>    <div id="ovid6" class='overlay'></div>    </div>   </div> </td> </tr>  
+    
+        <tr><td ><div class='box'id='b7'>  <div class='filled'id='chip7'>    <div id="ovid7" class='overlay'></div>    </div>   </div></td>
+            <td ><div class='box'id='b8'>  <div class='filled'id='chip8'>    <div id="ovid8" class='overlay'></div>    </div>   </div> </td>
+            <td ><div class='box'id='b9'>  <div class='filled'id='chip9'>    <div id="ovid9" class='overlay'></div>    </div>   </div> </td> </tr>       
+      
+    </table>
+ </div>
+ 
+     <div class='score'>Blue
+     <h1 id='blueScore'>0</h1>
+     
+ </div>
+</div >
+<div  id=gameOver><h1>Game Over</h1>
+    <h1 id=winnerText>Blue Wins!</h1>
+<h1 id= resetButton>Play Again</h1>
+</div>
+<div id='footy'>
+    <div class = 'bottomBoard'>
+    <div>Ties:<span id='ties'> 0</span></div>
+    <div>Games Played: <span id='gamesPlayed'>0</span>  
+        
+        
+        </div>
+       
+    
+
+    </div>
+   
+    </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

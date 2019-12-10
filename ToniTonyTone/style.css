@@ -1,0 +1,127 @@
+html{
+    background-color: rgb(64, 0, 192)
+}
+
+
+h1{
+    font-family: "Permanent Marker";
+    font-size: 48px;
+    color: rgb(201, 245, 4);
+}
+
+.title{
+    text-align: center;
+    
+}
+.label{
+    color: rgb(255, 136, 0);
+    font-size: 72px;
+    display: block;
+}
+#gameSection{
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.score{
+    
+    align-self: flex-start;
+    background-color: rgb(255, 136, 0);
+    text-align: center;
+    padding: 50px;
+    border-radius: 5%;
+    font-family: "Permanent Marker";
+    font-size: 24px;
+    flex: 1;
+}
+
+#gameBox {
+    height: 500px;
+    width: 500px;
+background-color: black;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 5%;
+  
+}
+td{
+    height: 150px;
+    width:  150px;
+   
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.945);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin:  auto;
+    border-radius: 10%;
+
+    
+}
+
+    .filled{
+        width: 50%;
+        height: 50%;
+        margin: auto;
+        background-color: transparent;
+        border-radius: 50%;
+        background-image: url("/Resources/Images/tone.png");
+        background-size: contain;
+        overflow: hidden;
+        display: none;
+        background-repeat: no-repeat;
+    }
+    .overlay{
+        width: 100%;
+        height: 100%;
+        background-color: greenyellow;
+        position: relative;
+        opacity: 60%;
+    }
+
+
+
+ 
+.bottomBoard{
+    background-color: rgb(255, 136, 0);;
+    width: 400px;   
+    border-radius: 5%;
+    font-family: "Permanent Marker";
+    box-sizing: border-box;
+    font-size: 24px;
+    display: inline-block;
+
+
+}
+
+#footy{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#gameOver{
+    width: 400px;
+    height: 300px;
+    position:fixed;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:red;
+    opacity: 85%;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+    cursor: pointer;
+    
+}
+#resetButton{
+   
+}
